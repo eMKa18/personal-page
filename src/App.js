@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Header from './components/header'
+import Sidebar from './components/header'
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 
@@ -8,7 +8,7 @@ function App() {
   return (
       <BrowserRouter>
         <Switch>
-          <Route path="/" exact component={Header}/>
+          <Route path="/" exact component={Sidebar}/>
         </Switch>
       </BrowserRouter>
 

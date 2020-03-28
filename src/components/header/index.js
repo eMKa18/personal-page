@@ -1,3 +1,3 @@
-import {Header} from "./Header"
+import {Sidebar} from "./Sidebar"
 
-export default Header;
+export default Sidebar;
