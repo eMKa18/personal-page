@@ -1,14 +1,14 @@
 import React from 'react';
-import './App.css';
-import Sidebar from './components/header'
+import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Home } from "./components/home/Home";
 
 
 function App() {
   return (
       <BrowserRouter>
         <Switch>
-          <Route path="/" exact component={Sidebar}/>
+            <Route path="/" exact component={Home}/>
         </Switch>
       </BrowserRouter>
 
