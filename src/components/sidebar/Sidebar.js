@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { SidebarLinks } from "./SidebarLinks";
-import { SidebarBrandImage } from "./SidebarBrandImage";
+import { SidebarLinks } from "./links/SidebarLinks";
+import { SidebarBrandImage } from "./brand/SidebarBrandImage";
+import { Copyrights } from "./copyrights/Copyrights";
+import { copyrights } from "./copyrights/copyrightsData";
+import { routes } from "./links/routes";
 import classNames from "classnames";
-import { Copyrights } from "./Copyrights";
 import LineIcon from "react-lineicons";
 
 const Sidebar = () => {
@@ -25,11 +27,12 @@ const Sidebar = () => {
                 onClick={() => setTogglerVisibility(!isTogglerShown)}
                 className={classNames(
                     "absolute p-0 h-12 w-12 left-auto mt-5",
-                    "sm:flex md:flex lg:hidden xl:hidden",
+                    "md:flex lg:hidden xl:hidden",
                     "items-center text-center justify-center text-2xl",
-                    "bg-gray-800",
+                    "bg-indigo-800",
+                    "border border-indigo-900",
                     "focus:border-gray-900 focus:border",
-                    {"transition-all duration-300 ease-out ml-64": isTogglerShown},
+                    {"transition-all duration-300 ease-out ml-64 sm:flex md:flex": isTogglerShown},
                     {"transition-all duration-300 ease-out ml-0": !isTogglerShown}
                 )
                 }>
@@ -43,8 +46,8 @@ const Sidebar = () => {
                 )
             }>
                 <SidebarBrandImage routeTo={"/"} pathToImage={"/images/brand-image.jpg"}/>
-                <SidebarLinks/>
-                <Copyrights/>
+                <SidebarLinks routes={routes}/>
+                <Copyrights {...copyrights}/>
             </div>
         </nav>
     );

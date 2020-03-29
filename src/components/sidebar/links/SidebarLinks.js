@@ -1,9 +1,8 @@
 import React from "react";
 import { SidebarLink } from "./SidebarLink";
 import classNames from "classnames";
-import { routes } from "./routes";
 
-const SidebarLinks = () => {
+const SidebarLinks = ({routes}) => {
     return (
         <ul className={
             classNames( "w-full py-8 px-2" )

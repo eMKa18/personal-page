@@ -20,7 +20,7 @@ const SidebarBrandImage = ({ routeTo, pathToImage }) => {
                     "overflow-hidden inline-block align-middle"
                 )
             }>
-                <img alt="brand" src={pathToImage}/>
+                <img alt="brand" src={pathToImage} data-testid={"brand-image"}/>
             </Link>
         </div>
     );
